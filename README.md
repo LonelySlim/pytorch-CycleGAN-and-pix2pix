@@ -6,6 +6,10 @@
 
 测试结果位于results/usenhance_cyclegan/test_latest文件夹下，使用浏览器打开index.html文件即可查看。对于其中的每一行图片，real_A为低质量图片，fake_B为模型由低质量图片生成的高质量图片，real_B为高质量图片。
 
+测试结果的PSNR（峰值信噪比）和SSIM（结构相似性）评价指标的均值和方差位于results/usenhance_cyclegan/test_latest/images/calculate_index.txt内。
+
 如何训练模型：python train.py --dataroot ./datasets/usenhance --name usenhance_cyclegan --model cycle_gan
 
 如何测试模型：python test.py --dataroot ./datasets/usenhance --name usenhance_cyclegan --model cycle_gan --num_test 208
+
+如何获取测试结果的PSNR（峰值信噪比）和SSIM（结构相似性）评价指标的均值和方差：python caculate_index.py
